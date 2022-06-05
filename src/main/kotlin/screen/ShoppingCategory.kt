@@ -11,9 +11,11 @@ class ShoppingCategory {
             println("다시 입력해주세요.")
             selectedCategory = readLine()
         }
+        // 장바구니 이동
         if (selectedCategory == "#") {
-            // TODO 1. 장바구니 아동
-        } else {
+            val shoppingCart = ShoppingCart()
+            shoppingCart.showCartItem()
+        } else {    // 선택한 카테고리 이동
             if (categories.contains(selectedCategory)) {
                 val shoppingProductList = ShoppingProductList()
                 shoppingProductList.showProducts(selectedCategory)
